@@ -1,6 +1,6 @@
 ---
 - name: Output facts within a playbook
-  hosts: all
+  hosts: awsnode1
   tasks:
   - name: Prints Ansible facts
     debug:
