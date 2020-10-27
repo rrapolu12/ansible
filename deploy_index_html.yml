@@ -1,6 +1,6 @@
 ---
 - name: Copy web.html
-  hosts: web
+  hosts: awsnode1
   become: true
   tasks:
   - name: copy web.html
