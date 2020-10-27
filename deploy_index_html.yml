@@ -5,5 +5,5 @@
   tasks:
   - name: copy web.html
     copy:
-      src: "{{ stage }}_web.html"
+      src: "dev_web.html"
       dest: /var/www/html/index.html
