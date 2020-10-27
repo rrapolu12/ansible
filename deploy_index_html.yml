@@ -3,13 +3,20 @@
   hosts: awsnode1
   become: true
   tasks:
-  - name: Create /var/www/html directory
-    become: true
+  - name: Ansible Check Directory
+    stat:
+      path: /var/www/html
+      register: www_folder
+  - name: Create /var/www/html directory if not exists
     file:
       path: /var/www/html
       state: directory
       mode: "u=rw,g=wx,o=rwx"
+      group: root
+      owner: root
       recurse: yes
+      become: true
+      when: www_folder.stat.exists == false
   - name: copy dev web.html
     become: true
     copy:
