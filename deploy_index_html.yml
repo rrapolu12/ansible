@@ -3,6 +3,10 @@
   hosts: awsnode1
   become: true
   tasks:
+  - name: Create /var/www/html directory
+    file:
+      path: /var/www/html
+      state: directory
   - name: copy web.html
     copy:
       src: "dev_web.html"
