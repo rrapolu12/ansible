@@ -9,6 +9,7 @@
       path: /var/www/html
       state: directory
   - name: copy dev web.html
+    become: true
     copy:
       src: "dev_web.html"
       dest: /var/www/html/index.html
