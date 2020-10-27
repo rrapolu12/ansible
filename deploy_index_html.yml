@@ -11,7 +11,7 @@
       owner: root
       group: root
       directory_mode: 0644
-      recursive: yes
+      recurse: yes
   - name: copy dev web.html
     become: true
     copy:
