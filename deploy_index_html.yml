@@ -8,15 +8,11 @@
     file:
       path: /var/www/html
       state: directory
-      owner: root
-      group: root
-      directory_mode: '0666'
+      mode: "u=rw,g=wx,o=rwx"
       recurse: yes
   - name: copy dev web.html
     become: true
     copy:
       src: "dev_web.html"
       dest: /var/www/html/index.html
-      owner: root
-      group: root
-      directory_mode: '0644'
+      mode: "u=rw,g=wx,o=rwx"
