@@ -10,7 +10,7 @@
       state: directory
       owner: root
       group: root
-      directory_mode: 0644
+      directory_mode: '0644'
       recurse: yes
   - name: copy dev web.html
     become: true
