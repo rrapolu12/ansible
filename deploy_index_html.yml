@@ -13,3 +13,6 @@
     copy:
       src: "dev_web.html"
       dest: /var/www/html/index.html
+      owener: root
+      group: root
+      mode: '0644'
